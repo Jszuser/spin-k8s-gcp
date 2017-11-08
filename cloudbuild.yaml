@@ -1,0 +1,8 @@
+steps:
+  - name: "gcr.io/cloud-builders/go"
+    args: ["install", "github.com/jszuser/spin-k8s-gcp"]
+    env: ["PROJECT_ROOT=github.com/jszuser/spin-k8s-gcp"]
+  - name: "gcr.io/cloud-builders/docker"
+    args: ["build", "-t", "gcr.io/ianatest-164415/spin-k8s-gcp:$REVISION_ID", "-f", "Dockerfile", "."]
+images:
+  - "gcr.io/ianatest-164415/gcp-cd-codelab:$REVISION_ID"
