@@ -1,5 +1,5 @@
 FROM alpine
 
-COPY gopath/bin/gcp-cd-codelab /go/bin/gcp-cd-codelab
+COPY gopath/bin/spin-k8s-gcp /go/bin/spin-k8s-gcp
 
-ENTRYPOINT /go/bin/gcp-cd-codelab
+ENTRYPOINT /go/bin/spin-k8s-gcp
